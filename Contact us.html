@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body
+>
+    <h1>Musika</h1>
+    <a href="Musika.html">Home</a>
+    <a href="About us.html">About Us</a>
+    <header>
+        <!-- Logo positioned in the top-left corner -->
+    <img src="logo.png" alt="Logo" class="logo" />
+   
+    </header>
+    <header>
+        <div class="container">
+            <h1>Musika - Contact Us</h1>
+            <p>We'd love to hear from you! Contact us with stuff you'd like to see.</p>
+        </div>
+    </header>
+ 
+    <main>
+        <section class="contact-info">
+            <div class="container">
+                <h2>Our Contact Information</h2>
+                <p>Email: ogw3000@hw.ac.uk</p>
+                <p>Phone: (971) 53596783</p>
+                <p>Address: 459 Yeka ketema, Addis Ababa, ET 78129</p>
+            </div>
+        </section>
+ 
+        <section class="contact-form">
+            <div class="container">
+                <h2>Send Us a Message</h2>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+ 
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+ 
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+ 
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+ 
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+ 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<style>
+/* General Styles */
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; text-align: center; margin-top: 100px;
+    }
+        a {
+            text-decoration: none; padding: 10px 20px; margin: 10px; border: 1px solid #333;  
+            border-radius: 5px; background-color: #030941; color: rgb(10, 61, 0);
+         }
+    .logo {
+            position: absolute;
+            top: 0px; 
+            left: 0px; 
+            height: auto; 
+            image size: height: 200px;;
+             width: 200px;
+        }
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+ 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+ 
+header {
+    background: #09e2f1;
+    color: #121313;
+    padding: 20px 0;
+    text-align: center;
+}
+ 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+ 
+header p {
+    margin: 10px 0 0;
+}
+ 
+main {
+    padding: 20px 0;
+}
+ 
+section {
+    margin: 20px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #e7ff10;
+}
+ 
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+ 
+/* Contact Form Styles */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+ 
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+ 
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+}
+ 
+.contact-form button:hover {
+    background: #22f3e2;
+}
+ 
+footer {
+    background: #09e2f1;
+    color: #030941;
+    text-align: center;
+    padding: 10px 0;
+}
+ 
+footer p {
+    margin: 0;
+}
+ 
+a {
+    color: #09e2f1;
+    text-decoration: none;
+}
+ 
+a:hover {
+    text-decoration: underline;
+}
+</style>
+   <!-- Firebase SDK -->
+ 
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+ 
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+ 
+   <script>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+ 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBjWAy8-uRAJvSrmC7hlsilPRPVsgbPJLE",
+  authDomain: "gift-findr.firebaseapp.com",
+  projectId: "gift-findr",
+  storageBucket: "gift-findr.firebasestorage.app",
+  messagingSenderId: "440027473577",
+  appId: "1:440027473577:web:5d4cadb597032a9d3c6bb8",
+  measurementId: "G-7BEW70FFFW"
+};
+ 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+ 
+ // Reference to the Realtime Database
+ const database = firebase.database();
+ 
+ // Submit Form Data to Firebase
+ function submitContactForm(event) {
+     event.preventDefault(); // Prevent page reload
+     const name = document.getElementById('name').value;
+     const email = document.getElementById('email').value;
+     const message = document.getElementById('message').value;
+ 
+     database.ref('contacts').push({
+         name: name,
+         email: email,
+         message: message
+     })
+     .then(() => {
+         alert('Your message has been sent successfully!');
+         document.getElementById('contactForm').reset();
+     })
+     .catch((error) => {
+         alert('Error: ' + error.message);
+     });
+ }
+</script>
+</head>
