@@ -10,7 +10,6 @@
 >
     <h1>Musika</h1>
     <a href="Musika.html">Home</a>
-    <a href="About us.html">About Us</a>
     <header>
         <!-- Logo positioned in the top-left corner -->
     <img src="logo.png" alt="Logo" class="logo" />
@@ -63,7 +62,6 @@
 </body>
 </html>
 <style>
-/* General Styles */
 body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; text-align: center; margin-top: 100px;
     }
@@ -76,7 +74,7 @@ body {
             top: 0px; 
             left: 0px; 
             height: auto; 
-            image size: height: 200px;;
+             height: 200px;
              width: 200px;
         }
 body {
@@ -122,8 +120,6 @@ h2 {
     color: #333;
     margin-bottom: 10px;
 }
- 
-/* Contact Form Styles */
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -185,25 +181,8 @@ a:hover {
    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
  
    <script>
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
- 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBjWAy8-uRAJvSrmC7hlsilPRPVsgbPJLE",
-  authDomain: "gift-findr.firebaseapp.com",
-  projectId: "gift-findr",
-  storageBucket: "gift-findr.firebasestorage.app",
-  messagingSenderId: "440027473577",
-  appId: "1:440027473577:web:5d4cadb597032a9d3c6bb8",
-  measurementId: "G-7BEW70FFFW"
-};
- 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
  
