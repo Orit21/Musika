@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Musika Recording Studio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(238, 235, 63)1;
+            background-color: rgb(7, 231, 201); 
+            
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: rgb(238, 235, 63); 
+        }
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .pricing {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .price-option {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid  #1d1083;
+            border-radius: 8px;
+            background-color: #1d1083;
+        }
+        .price-option h3 {
+            font-size: 28px;
+            margin: 0;
+        }
+        .price-option p {
+            font-size: 18px;
+        }
+        .booking-form {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .booking-form h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .booking-form input, .booking-form select {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-button {
+            background-color: #090431;
+            border: none;
+            padding: 10px 20px;
+            color: rgb(7, 231, 201);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #090431;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Musika Recording Studio</h1>
+    </header>
+
+    <div class="container">
+        <div class="pricing">
+            <h2>Pricing</h2>
+            <div class="price-option">
+                <h3>Hourly Session</h3>
+                <p>Price: $50/hour</p>
+            </div>
+            <div class="price-option">
+                <h3>Full Day Package</h3>
+                <p>Price: $400 (8 hours)</p>
+            </div>
+            <div class="price-option">
+                <h3>Mixing & Mastering</h3>
+                <p>Price: $200 per track</p>
+            </div>
+        </div>
+
+        <div class="booking-form">
+            <h2>Book Your Session</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="date" required>
+                <select required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="hourly">Hourly Session</option>
+                    <option value="full_day">Full Day Package</option>
+                    <option value="mixing">Mixing & Mastering</option>
+                </select>
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
