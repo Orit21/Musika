@@ -10,12 +10,21 @@
             margin: 0;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             color: #1d1083;
-            background-color: rgb(7, 231, 201); 
+            background-color: rgb(7, 231, 201);
+            position: relative; /* Allow absolute positioning of the logo */
+        }
+        .logo {
+            position: absolute;
+            top: 0; /* Position at the top */
+            left: 0; /* Position at the left */
+            width: 157px; /* Width of the logo */
+            height: 157px; /* Height of the logo */
+            z-index: 2; /* Ensure logo is above the background */
         }
         header {
             text-align: center;
             padding: 50px 0;
-            background-color: rgb(238, 235, 63); 
+            background-color: rgb(238, 235, 63);
         }
         header h1 {
             font-size: 48px;
@@ -95,6 +104,8 @@
 </head>
 
 <body>
+    <img class="logo" src="Logo.png" alt="Logo"> <!-- Logo positioned absolutely -->
+
     <header>
         <h1>Musika Recording Studio</h1>
     </header>
