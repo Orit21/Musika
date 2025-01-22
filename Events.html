@@ -1,48 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Events</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
-            padding: 50px;
-            background-color: #e7ff10;
-            color: rgb(14, 196, 150);
-            font-family:  Arial, sans-serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #000;
+            color: #ffffff;
+            position: relative;
         }
-        img {
-            height: 400px;
-            width: 500px;
-            display: block;
-            margin: 6px;
-            border: solid 5px rgb(0, 212, 202);
-            border-radius: 10px;
+        header {
+            text-align: center;
+            padding: 100px 0; 
+            position: relative;
+            z-index: 1; 
+            overflow: hidden;
         }
-        imageandtext{
-            margin-left:auto;
-            margin-right:auto ;
+        header img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the area */
+            z-index: -1; /* Place the image behind the text */
         }
-        p {
-           
-            color: white;
+        header h1 {
+            font-size: 48px;
+            margin: 0;
         }
- 
-        .images-display {
+        header p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .cta-button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px; /* Added margin for spacing */
+            display: inline-block; /* Ensures the button sits below the text */
+        }
+        .featured-events {
             display: flex;
+            justify-content: center;
+            margin: 40px 0;
         }
-        a {
-            color: rgb(10, 219, 209);
-            font-size: 50px;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        .event {
+            margin: 0 20px;
+            text-align: center;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
         }
-</style>
+        .event img {
+            width: 100%;
+            height: 200px; /* Set fixed height for equal image sizes */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+        }
+        .event h3 {
+            margin: 10px 0;
+        }
+        .event p {
+            font-size: 16px;
+        }
+        .event:hover {
+            transform: scale(1.05);
+        }
+        .back-home {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .back-home a:hover {
+            background-color: #e6b800; 
+        }
+        .logo {
+            position: absolute;
+            top: 0; /* Position at top */
+            left: 0; /* Position at left */
+            height: 160px; /* Adjust logo height as needed */
+            width: auto; /* Maintain aspect ratio */
+            z-index: 2 /* Ensure logo is above background */
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Jemmo Jazz </h1>
-    <p>Join us during our annual jazz festival featuring several artists such as Mahmoud Ahmed, Endryas Damtew and Admass Kassahun. We'll be hosting this event at Jemmo adarash near zefnesh mall from 8 pm to 11pm. Don't miss out on the fun and stay updated for information on tickets </p>
-    <p></p>
+    <img class="logo" src="Logo.png" alt="Logo"> <!-- Logo positioned absolutely -->
+
+    <header>
+        <img src="Event background.jpeg" alt="Festival Background"> 
+        <h1>Our Annual Festivals</h1>
+        <p>Experience the magic, feel the beat, and dance your heart out!</p>
+        <a href="Join us.html" class="cta-button">Join Us</a> 
+    </header>
+
+    <div class="featured-events" id="events">
+        <div class="event">
+            <img src="Jazz Concert.jpeg" alt="Jemmo Jazz">
+            <h3>Jemmo Jazz</h3>
+            <p>Join us for an unforgettable night of beats and rhythm.</p>
+        </div>
+        <div class="event">
+            <img src="Afro Concert.jpeg" alt="Afro Addis">
+            <h3>Afro Addis</h3>
+            <p>A celebration of music and culture in the heart of the city.</p>
+        </div>
+        <div class="event">
+            <img src="Hiphop concert.jpeg" alt="Hiphop Night">
+            <h3>Hiphop Night</h3>
+            <p>Get ready for a night filled with energy and excitement featuring several rap artists ready to take the show to the crowd!</p>
+        </div>
+    </div>
+
+    <div class="back-home">
+        <a href="Musika.html"> Home</a> 
+    </div>
 </body>
+
+</html>
