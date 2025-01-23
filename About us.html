@@ -11,6 +11,14 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             color: rgb(0, 17, 255);
             background-color: #00ffdd; 
+            position: relative; /* Allow absolute positioning for the back button */
+        }
+        .logo {
+            position: absolute;
+            top: 0px; 
+            left: 0px; 
+            height: 200px; /* Fixed height for logo */
+            width: auto; /* Maintain aspect ratio */
         }
         header {
             text-align: center;
@@ -57,17 +65,20 @@
             height: 150px; /* Adjust size as needed */
         }
         .back-button {
+            position: absolute;
+            top: 20px; /* Space from the top */
+            right: 20px; /* Space from the right */
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 20px;
             font-size: 20px;
-            color: white;
-            background-color: rgb(0, 17, 255);
+            color: #ffcc00; /* Yellow text */
+            background-color: #000; /* Black background */
             text-decoration: none;
             border-radius: 5px;
+            z-index: 2; /* Ensure it is above other content */
         }
         .back-button:hover {
-            background-color: rgb(0, 10, 100);
+            background-color: rgb(0, 10, 100); /* Darken on hover */
         }
     </style>
 </head>
@@ -78,6 +89,8 @@
         <h1>About Us</h1>
         <p>Music done right!</p>
     </header>
+
+    <a href="Musika.html" class="back-button">Home</a> <!-- Home link styled as a black box with yellow text -->
 
     <div class="content">
         <div class="section">
@@ -101,9 +114,7 @@
                     <h3>Jemmo Jazz</h3>
                 </div>
             </div>
-            <a href="Musika.html" class="back-button"> Home</a>
         </div>
     </div>
 </body>
-
 </html>
