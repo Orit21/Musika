@@ -21,9 +21,21 @@
             position: absolute;
             top: 0; /* Position at the top */
             left: 0; /* Position at the left */
-            width: 160px; /* Width of the logo */
-            height: 160px; /* Height of the logo */
+            width: 200px; /* Width of the logo */
+            height: 200px; /* Height of the logo */
             z-index: 2; /* Ensure logo is above the background */
+        }
+        .back-home {
+            position: absolute;
+            top: 20px; /* Space from the top */
+            right: 20px; /* Space from the right */
+            background-color: #000; /* Black background */
+            color: #ffcc00; /* Yellow text */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 2; /* Ensure it is above other content */
         }
         .container {
             background-color: #ffcc00; /* Yellow background */
@@ -78,6 +90,7 @@
 
 <body>
     <img class="logo" src="Logo.png" alt="Logo"> <!-- Logo positioned absolutely -->
+    <a href="Musika.html" class="back-home">Home</a> <!-- Back to Home link -->
 
     <div class="container">
         <h1>Sign Up</h1>
@@ -93,5 +106,4 @@
         </div>
     </div>
 </body>
-
 </html>
