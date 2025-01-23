@@ -77,20 +77,19 @@
             transform: scale(1.05);
         }
         .back-home {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .back-home a {
-            display: inline-block;
-            background-color: #ffcc00;
-            color: #000;
+            position: absolute;
+            top: 20px; /* Space from the top */
+            right: 20px; /* Space from the right */
+            background-color: #ffcc00; /* Yellow background */
+            color: #000; /* Black text */
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 18px;
+            z-index: 2; /* Ensure it is above other content */
         }
-        .back-home a:hover {
-            background-color: #e6b800; 
+        .back-home:hover {
+            background-color: #e6b800; /* Change on hover */
         }
         .logo {
             position: absolute;
@@ -98,13 +97,15 @@
             left: 0; /* Position at left */
             height: 160px; /* Adjust logo height as needed */
             width: auto; /* Maintain aspect ratio */
-            z-index: 2 /* Ensure logo is above background */
+            z-index: 2; /* Ensure logo is above background */
         }
     </style>
 </head>
 
 <body>
     <img class="logo" src="Logo.png" alt="Logo"> <!-- Logo positioned absolutely -->
+
+    <a href="Musika.html" class="back-home">Home</a> <!-- Home link styled as a button -->
 
     <header>
         <img src="Event background.jpeg" alt="Festival Background"> 
@@ -130,10 +131,5 @@
             <p>Get ready for a night filled with energy and excitement featuring several rap artists ready to take the show to the crowd!</p>
         </div>
     </div>
-
-    <div class="back-home">
-        <a href="Musika.html"> Home</a> 
-    </div>
 </body>
-
 </html>
